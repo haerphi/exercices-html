@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+    <head>
+        <title>Syntaxe markdown</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body>
+        <h1> Syntaxe markdown </h1>
+
+        <h2> Les listes </h2>
+
+        <h3> Non ordonnées </h3>
+        <p>
+        On précède chaque items par une astérisque "`*`".
+        </p>
+        <ul>
+            <li> Item 1 </li>
+            <li> Item 2 </li>
+            <ul>
+                <li> Item 2a </li>
+                <li> Item 2b </li>
+            </ul>
+            <li> Item 3 </li>
+        </ul>   
+
+        <h3> Ordonées </h3>
+        <p>
+        Pour imbriquer des listes, on indente la seconde liste dans la première.  
+        </p>
+        <ol>
+            <li> Item 1 </li>
+            <li> Item 2 </li>
+            <li> Item 3 </li>
+            <ol>
+                <li> Item 3a </li>
+                <li> Item 3b </li>
+            </ol>
+        </ol>
+        <h3> Les liste de taches. </h3>
+
+        <!--
+        On crée ces listes en les précédant de "`-[]`" pour des items non cochés et "`-[x]`" pour des items cochés.
+
+        - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+        - [x] list syntax required (any unordered or ordered list supported)
+        - [x] this is a complete item
+        - [ ] this is an incomplete item
+        -->
+        <h3> Imbrication </h3>
+        <p>
+        On imbrique des listes en les précédant par une indentation propre à chaque liste.
+        </p>
+        <ul>
+            <li> Item 1 </li>
+            <li> Item 2 </li>
+            <li> Item 1 </li>
+            <li> Item 2 </li>
+            <li> Item 3 </li>
+            <li> Item 3 </li>  
+        </ul>
+
+        <h2> Images </h2>  
+        <p>
+        Syntaxe à utiliser afin d'ajouter une image:  
+        <br>
+        `![Alt](url)`  
+        <br>
+        Une autre manière d'ajouter une image est:  
+        <br>
+        `![Alt](/home/user/images/img.png)`  
+        </p>
+        <h2> Titres : </h2>
+        <p>
+        Voici comment créer plusieurs titres :
+
+        <code># Titre</code>: équivaut à <code> &lt;h1&gt;</code> en html <br>
+        <code>## Titre</code>: équivaut à <code>&lt;h2&gt;</code> en html<br>
+        et ainsi de suite jusqu'à arriver au <code>&lt;h6&gt;</code> : <code>###### Titre</code>.
+        </p>
+        <h2> Mise en forme :</h2>
+
+        <ul>
+            <li> Gras : ``**texte**``</li>
+            <li> Italique : ``*texte*``</li>
+            <ul>
+                <li>ou      `_texte_`</li>
+            </ul>
+            <li> Gras & italique : ``***texte***``</li>
+            <li> Souligné : `__texte__`</li>
+            <li> Italique & souligné : `__*texte*__`</li>
+            <li> Gras & souligné : `__**texte**__`</li>
+            <li> Italique, gras & souligné : `__***texte***__`</li>
+        </ul>
+        <h2> Liens : </h2>
+        <p>
+        Il y a 2 façons de faire :
+        <ul>
+            <li> Soit en écrivant directement le lien en ayant pour nom l'url. *Ex :* http://github.com</li>
+            <li> Soit en donnant un nom au lien <code>[nom du lien]</code> qui, en cliquant dessus, vous dirigera vers l'url <code>(url)</code>;<code>[Github](http://github.com)</code>. <i>Ex :</i> <a href="http://github.com">Github</a></li>
+        </ul>
+        </p>    
+        <h2> Code </h2>
+        <p>
+            Pour écrire du code en Markdown avec une coloration syntaxique il faut le code entre avec le nom du langage.
+        </p>
+        <p>
+        Exemple: <br>
+        Pour faire ce ci:
+        <pre><code class="js">function fancyAlert(arg) {
+            if(arg) {
+                $.facebox({div:'#foo'})
+            }
+        }
+        </code>
+        <p>
+            Il faut faire cela:
+        </p>
+        <code>```javascript
+            function fancyAlert(arg) {
+                if(arg) {
+                    $.facebox({div:'#foo'})
+                }
+            }
+        ```
+        </code>
+        <h3> Réferences </h3>
+        <ul>
+            <li> <a href="readme.md">readme.md</a></li>
+            <li> <a href="mk.md">mk.md</a></li>
+            <li> <a href="syntaxe.md">syntaxe.md</a></li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+/* The animation code */
+@keyframes lookingAtYou {
+    from {left : -500px;}
+  to {left : -10px;}
+}
+
+#erreur{
+    text-align: center;
+}
+#looking{
+    position: absolute;
+    left : -500px;
+}
+
+#erreur:hover + #looking{
+    animation-name: lookingAtYou;
+    animation-duration: 5s;
+}
